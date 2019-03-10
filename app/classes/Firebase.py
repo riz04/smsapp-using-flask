@@ -10,14 +10,7 @@ class Firebase():
 
     def get_config(self):
         config={}
-        # config = {
-        #     'apiKey': "AIzaSyC0hXZcnKHdO54XRVbP4afs7924JkmGpwo",
-        #     'authDomain': "sachkyahai-newsplugin.firebaseapp.com",
-        #     'databaseURL': "https://sachkyahai-newsplugin.firebaseio.com",
-        #     'projectId': "sachkyahai-newsplugin",
-        #     'storageBucket': "sachkyahai-newsplugin.appspot.com",
-        #     'messagingSenderId': "1059885073178"
-        # };
+       
         return config
 
     def get_db(self):
