@@ -12,9 +12,8 @@ cors=CORS(app)
 
 @app.route('/',methods=['GET','POST'])
 def first_point():
-    st=Stories()
-    stories=st.get_all_data()
-    return render_template('home.html',stories=stories)
+    
+    return render_template('registration.html')
 
 
 #app.register_blueprint(home_blueprint)
