@@ -9,7 +9,12 @@ class Firebase():
         pass
 
     def get_config(self):
-        config={}
+        config={'apiKey': "AIzaSyD8F9THLpGE7UN_GZKlxC7yR4UWDEN5RO0",
+                'authDomain': "vedimart-c67f7.firebaseapp.com",
+                'databaseURL': "https://vedimart-c67f7.firebaseio.com",
+                'projectId': "vedimart-c67f7",
+                'storageBucket': "",
+                'messagingSenderId': "111203891062"}
        
         return config
 

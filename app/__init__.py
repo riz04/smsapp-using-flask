@@ -1,7 +1,7 @@
 from flask import Flask,render_template,Response
 from flask_cors import CORS,cross_origin
 
-#from app.home.home import home_blueprint
+from app.home.home import home_blueprint
 
 
 
@@ -15,5 +15,7 @@ def first_point():
     
     return render_template('registration.html')
 
+@app.route('/offers',methods=['GET','POST'])
+def get_offers():
 
-#app.register_blueprint(home_blueprint)
+app.register_blueprint(home_blueprint)
