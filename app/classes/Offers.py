@@ -7,4 +7,4 @@ class Offers():
         db=firebase.get_db()
         data=db.child('/offers')
         data_value=data.get().val()
-        pass
+        return data_value

@@ -1,16 +1,31 @@
 
 var BASE_URL='http:localhost:8000/'
-function registration_click(){
-    $.ajax({
-        url:`${BASE_URL}/registration`,
-        data:JSON.stringify(payload),
-        type:'POST',
-        success:function(response){
-            alert('hello')
-        }
-    })
-}
-
+// function registration_click(){
+//     var name=document.getElementById('name').value
+//     var number=document.getElementById('number').value
+//     var payload={
+//         name:name,
+//         number:number
+//     }
+//     $.ajax({
+//         url:`${BASE_URL}/registration`,
+//         data:JSON.stringify(payload),
+//         type:'POST',
+//         success:function(response){
+//             alert('hello')
+//         }
+//     })
+// }
+jQuery.validator.addMethod(
+    "regex",
+     function(value, element, regexp) {
+         if (regexp.constructor != RegExp)
+            regexp = new RegExp(regexp);
+         else if (regexp.global)
+            regexp.lastIndex = 0;
+            return this.optional(element) || regexp.test(value);
+     },"Wrong Format"
+  );
 function create_card_html(item){
 return '<div class="card">'+
   
@@ -28,6 +43,9 @@ $(function() {
         },
         number: {
           required: true,
+        regex:/^[56789]\d{9}$/,
+        
+
           
           
         }

@@ -15,7 +15,8 @@ def first_point():
     
     return render_template('registration.html')
 
-@app.route('/offers',methods=['GET','POST'])
-def get_offers():
+
+
+
 
 app.register_blueprint(home_blueprint)
